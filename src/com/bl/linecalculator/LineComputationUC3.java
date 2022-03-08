@@ -4,8 +4,6 @@ import java.util.Scanner;
 
 public class LineComputationUC3 {
 	public static void main(String[] args) {
-		double lengthofline1 = 0;
-		double lengthofline2 = 0;
 		System.out.println("Welcome to Line Computation Program");
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the x coordinate of first point of the First line");
@@ -25,9 +23,14 @@ public class LineComputationUC3 {
 		double bx2 = sc.nextDouble();
 		System.out.println("Enter the y coordinate of second point of the second line");
 		double by2 = sc.nextDouble();
+		LineComputationUC3 line = new LineComputationUC3();
+		line.checkEqual(ax1,ax2,ay1,ay2,bx1,by1,bx2,by2);
+		sc.close();
+	}
+	public void checkEqual(double ax1,double ax2,double ay1,double ay2,double bx1,double by1,double bx2,double by2) {
 		
-		lengthofline1 =Math.floor(Math.sqrt(((ax2-ax1)*(ax2-ax1))+((ay2-ay1)*(ay2-ay1))));
-		lengthofline2 =Math.floor(Math.sqrt(((bx2-bx1)*(bx2-bx1))+((by2-by1)*(by2-by1))));
+		double lengthofline1 =Math.floor(Math.sqrt(((ax2-ax1)*(ax2-ax1))+((ay2-ay1)*(ay2-ay1))));
+		double lengthofline2 =Math.floor(Math.sqrt(((bx2-bx1)*(bx2-bx1))+((by2-by1)*(by2-by1))));
 		System.out.println("Length of the first line is :" + lengthofline1);
 		System.out.println("Length of the second line is :" + lengthofline2);
 		
@@ -40,7 +43,6 @@ public class LineComputationUC3 {
 		}else
 			System.out.println("Both are equal");
 		
-		sc.close();
 		
 	}
 
