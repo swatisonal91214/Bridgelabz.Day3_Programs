@@ -19,7 +19,6 @@ public class LineComputationUC1 {
 		lengthofline =String.valueOf(Math.floor((Math.sqrt(((x2-x1)*(x2-x1))+((y2-y1)*(y2-y1))))));
 		System.out.println("Length of the line is :" + lengthofline);
 		sc.close();
-		
 	}
 
 }

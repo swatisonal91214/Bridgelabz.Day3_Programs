@@ -41,8 +41,6 @@ public class LineComputationUC2 {
 		System.out.println("Comparing the equality of the lines of based on end points"); // UC2
 		String diffinline1 =String.valueOf(Math.floor((bx2-ax2)));
 		String diffinline2 =String.valueOf(Math.floor((by2-ay2)));
-		
-	
 		if(diffinline1.equals(diffinline2)) {
 			System.out.println("The are equal");
 		}else {

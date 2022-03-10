@@ -1,7 +1,7 @@
 package com.bl.linecalculator;
 
 import java.util.Scanner;
-// using compareTo method for comparing the lines,also 
+// using compareTo method for comparing the lines,also printing the difference
 public class LineComputationUC3 {
 	public static void main(String[] args) {
 		System.out.println("Welcome to Line Computation Program");
@@ -39,15 +39,11 @@ public class LineComputationUC3 {
 		if(lengthofline1.compareTo(lengthofline2)== 1) {
 			 difference= (Double.valueOf(lengthofline2))- (Double.valueOf(lengthofline1));
 			System.out.println("Line 1 is longer than line 2 by " +difference);
-			
 		} else if(lengthofline1.compareTo(lengthofline2)==0) {
 			System.out.println("Both lines are equal");
 		} else  {
 			difference= (Double.valueOf(lengthofline2))- (Double.valueOf(lengthofline1));
 			System.out.println("Line 2 is longer than line 1 by " +difference);
-		
-		
-		
 		}
 	}
 }

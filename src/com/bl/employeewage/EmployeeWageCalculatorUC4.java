@@ -4,6 +4,8 @@ public class EmployeeWageCalculatorUC4 {
 	public static void main(String[] args) {
 		int totalWage = 0;
 		int isPresentHour =(int) Math.floor(Math.random()*9);
+		System.out.println("Welcome to Employee Wage Computation Program!!!");
+		System.out.println();
 		switch(isPresentHour){
 			case 0 :
 				totalWage = 0;

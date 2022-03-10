@@ -6,6 +6,8 @@ public class EmployeeWageCalculatorUC5 {
 			double total_wage_per_day = 0;
 			final double WAGE_PER_HOUR = 20;
 			final double TOTAL_WORKING_HOURS = 8; 
+			System.out.println("Welcome to Employee Wage Computation Program!!!");
+			System.out.println();
 			 
 			double monthlyWage = 0;
 			for(int day = 1; day<=20; day++) {
@@ -28,14 +30,12 @@ public class EmployeeWageCalculatorUC5 {
 					System.out.println("Daily total Wages is" + "  " + total_wage_per_day + " rupees");
 				}
 				monthlyWage = monthlyWage + total_wage_per_day;
+				System.out.println();
 			}
 			System.out.println();
 			System.out.println("Montly Wage of the Employee is :" + monthlyWage);
-			
-			
-
 	}
-	}
+}
 
 
 
