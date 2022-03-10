@@ -1,7 +1,7 @@
 package com.bl.linecalculator;
 
 import java.util.Scanner;
-
+// using compareTo method for comparing the lines,also 
 public class LineComputationUC3 {
 	public static void main(String[] args) {
 		System.out.println("Welcome to Line Computation Program");
@@ -24,27 +24,33 @@ public class LineComputationUC3 {
 		System.out.println("Enter the y coordinate of second point of the second line");
 		double by2 = sc.nextDouble();
 		LineComputationUC3 line = new LineComputationUC3();
-		line.checkEqual(ax1,ax2,ay1,ay2,bx1,by1,bx2,by2);
+		line.calculateLength(ax1,ax2,ay1,ay2,bx1,by1,bx2,by2);
 		sc.close();
 	}
-	public void checkEqual(double ax1,double ax2,double ay1,double ay2,double bx1,double by1,double bx2,double by2) {
-		
-		double lengthofline1 =Math.floor(Math.sqrt(((ax2-ax1)*(ax2-ax1))+((ay2-ay1)*(ay2-ay1))));
-		double lengthofline2 =Math.floor(Math.sqrt(((bx2-bx1)*(bx2-bx1))+((by2-by1)*(by2-by1))));
+	
+	public void calculateLength(double ax1,double ax2,double ay1,double ay2,double bx1,double by1,double bx2,double by2) {
+		double difference;
+		String lengthofline1 =String.valueOf(Math.floor(Math.sqrt(((ax2-ax1)*(ax2-ax1))+((ay2-ay1)*(ay2-ay1)))));
+		String lengthofline2 =String.valueOf(Math.floor(Math.sqrt(((bx2-bx1)*(bx2-bx1))+((by2-by1)*(by2-by1)))));
 		System.out.println("Length of the first line is :" + lengthofline1);
+		System.out.println();
 		System.out.println("Length of the second line is :" + lengthofline2);
+		System.out.println();
+		if(lengthofline1.compareTo(lengthofline2)== 1) {
+			 difference= (Double.valueOf(lengthofline2))- (Double.valueOf(lengthofline1));
+			System.out.println("Line 1 is longer than line 2 by " +difference);
+			
+		} else if(lengthofline1.compareTo(lengthofline2)==0) {
+			System.out.println("Both lines are equal");
+		} else  {
+			difference= (Double.valueOf(lengthofline2))- (Double.valueOf(lengthofline1));
+			System.out.println("Line 2 is longer than line 1 by " +difference);
 		
-		if(lengthofline1>lengthofline2) {
-			double difference = (lengthofline1 - lengthofline2);
-			System.out.println("First line is greater by " + difference);
-		}else if(lengthofline1<lengthofline2) {
-			double difference = (lengthofline2 - lengthofline1);
-			System.out.println("Second line is greater by " + difference);
-		}else
-			System.out.println("Both are equal");
 		
 		
+		}
 	}
-
-
 }
+		
+		
+	
